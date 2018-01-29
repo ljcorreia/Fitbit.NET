@@ -36,7 +36,7 @@ namespace SampleWebMVC.Controllers
             //Provide the App Credentials. You get those by registering your app at dev.fitbit.com
             //Configure Fitbit authenticaiton request to perform a callback to this constructor's Callback method
             var authenticator = new OAuth2Helper(appCredentials, Request.Url.GetLeftPart(UriPartial.Authority) + "/Fitbit/Callback");
-            string[] scopes = new string[] {"profile"};
+            string[] scopes = new string[] { "heartrate" };
             
             string authUrl = authenticator.GenerateAuthUrl(scopes, null);
 
@@ -117,14 +117,26 @@ namespace SampleWebMVC.Controllers
 
         public async Task<ActionResult> LastWeekSteps()
         {
-
             FitbitClient client = GetFitbitClient();
-
             var response = await client.GetTimeSeriesIntAsync(TimeSeriesResourceType.Steps, DateTime.UtcNow.AddDays(-7), DateTime.UtcNow);
-
             return View(response);
-
         }
+
+        public async Task<ActionResult> HeartRate()
+        {
+            var client = GetFitbitClient();
+            var response = await client.GetHeartRateTimeSeries(DateTime.Today, DateRangePeriod.OneDay);
+            return View(response);
+        }
+
+        public async Task<ActionResult> Friends()
+        {
+            var client = GetFitbitClient();
+            var response = await client.GetFriendsAsync();
+            return View(response);
+        }
+
+
         /*
         //example using the direct API call getting all the individual logs
         public ActionResult MonthFat(string id)

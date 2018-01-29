@@ -1,0 +1,18 @@
+﻿@model List<Fitbit.Models.UserProfile>
+
+@{
+    ViewBag.Title = "Friends";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Friends</h2>
+
+<table>
+    @foreach (Fitbit.Models.UserProfile result in Model.ToList())
+    { 
+        <tr>
+            <td>@result.AboutMe</td>
+            <td>@result.DisplayName</td>
+        </tr>
+    }
+</table>

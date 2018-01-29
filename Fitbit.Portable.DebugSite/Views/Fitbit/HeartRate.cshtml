@@ -1,0 +1,30 @@
+﻿@model Fitbit.Models.HeartActivitiesTimeSeries
+
+@{
+    ViewBag.Title = "Heart Rate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Heart Rate</h2>
+
+<table>
+    @foreach (var heartRateActivity in Model.HeartActivities)
+    {
+        <tr>
+            <td>@heartRateActivity.DateTime.ToShortDateString()</td>
+            <td><table>
+                    @foreach (var heartRateZones in heartRateActivity.HeartRateZones)
+                    {
+                        <tr>
+                            <td>Name</td><td>@heartRateZones.Name</td>
+                            <td>Calories</td><td>@heartRateZones.CaloriesOut</td>
+                            <td>Max</td><td>@heartRateZones.Max</td>
+                            <td>Min</td><td>@heartRateZones.Min</td>
+                            <td>Minutes</td><td>@heartRateZones.Minutes</td>
+                        </tr>
+                    }
+                </table>
+            </td>
+        </tr>
+    }
+    </table>

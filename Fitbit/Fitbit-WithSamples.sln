@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fitbit.Common", "..\Fitbit.Common\Fitbit.Common.csproj", "{37636456-5640-4258-ADF5-11292E6B422E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fitbit.Portable", "..\Fitbit.Portable\Fitbit.Portable.csproj", "{1358D3B4-0698-4003-97EB-B6D489E04138}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fitbit.Portable.Tests", "..\Fitbit.Portable.Tests\Fitbit.Portable.Tests.csproj", "{F811594D-3323-4147-9780-D3A1F930B99F}"
@@ -22,12 +20,6 @@ Global
 		TrialRelease|Any CPU = TrialRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{37636456-5640-4258-ADF5-11292E6B422E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37636456-5640-4258-ADF5-11292E6B422E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37636456-5640-4258-ADF5-11292E6B422E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37636456-5640-4258-ADF5-11292E6B422E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37636456-5640-4258-ADF5-11292E6B422E}.TrialRelease|Any CPU.ActiveCfg = Release|Any CPU
-		{37636456-5640-4258-ADF5-11292E6B422E}.TrialRelease|Any CPU.Build.0 = Release|Any CPU
 		{1358D3B4-0698-4003-97EB-B6D489E04138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1358D3B4-0698-4003-97EB-B6D489E04138}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1358D3B4-0698-4003-97EB-B6D489E04138}.Release|Any CPU.ActiveCfg = Release|Any CPU

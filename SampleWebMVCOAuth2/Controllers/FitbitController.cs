@@ -73,7 +73,7 @@ namespace SampleWebMVC.Controllers
 
             ViewBag.AccessToken = await fitbitClient.RefreshOAuth2TokenAsync();
 
-            return View("Callback");
+            return View($"Callback");
         }
 
         public async Task<ActionResult> TestToken()
@@ -84,7 +84,7 @@ namespace SampleWebMVC.Controllers
 
             ViewBag.UserProfile = await fitbitClient.GetUserProfileAsync();
 
-            return View("TestToken");
+            return View($"TestToken");
         }
 
         /*
